@@ -1,5 +1,4 @@
 .header{
-  background: var(--color-primary);
   height: 60px;
   width: 100%;
   padding: 0 32px;
@@ -7,6 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #18181F;
 }
 
 .header h1{
@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 64px;
 }
 
 .main{
@@ -71,7 +72,7 @@
   font-weight: bold;
   font-size: 13px;
   cursor: pointer;
-  color: var(--color-primary);
+  color: #90909F;
 }
 
 .main ul li:hover{
@@ -81,4 +82,34 @@
 .main ul li.active{
   background: #1F64BF;
   color: #fff;
+}
+
+.aside{
+  width: 100%;
+  max-width: 375px;
+  background: var(--color-bg-component);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 8px;
+  gap: 24px;
+  padding: 24px 16px;
+}
+
+.aside img{
+  width: calc(100% - 50px);
+  height: auto;
+}
+
+.aside button{
+  width: 250px;
+  height: 46px;
+  border: unset;
+  background-color: #1F64BF;
+  border-radius: 24px;
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
 }

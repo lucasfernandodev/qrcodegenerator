@@ -43,7 +43,12 @@ export default function App() {
         <Accordion title='Fazer upload de logo'></Accordion>
         <Accordion title='Editar design'></Accordion>
         <Accordion title='Editar Cores'></Accordion>
-        </main>
+      </main>
+
+    <aside className={style.aside}>
+      <img src="/public/images/qrcode.svg" alt="QRCODE"/>
+      <button>Gerar QR code</button>
+    </aside>
     </div>
     </>
   )
