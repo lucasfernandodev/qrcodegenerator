@@ -1,4 +1,4 @@
-.header{
+.header {
   height: 60px;
   width: 100%;
   padding: 0 32px;
@@ -6,29 +6,28 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #18181F;
+  border-bottom: 1px solid #18181f;
 }
 
-.header h1{
+.header h1 {
   font-size: 13px;
-  font-weight:  bold;
+  font-weight: bold;
   color: var(--color-white);
   text-transform: uppercase;
 }
 
-.header a{
+.header a {
   font-size: 13px;
   color: var(--color-white);
   text-decoration: none;
   font-weight: bold;
 }
 
-.header a:hover{
+.header a:hover {
   text-decoration: underline;
 }
 
-
-.content{
+.content {
   padding: 64px 100px;
   display: flex;
   flex-direction: row;
@@ -36,22 +35,22 @@
   gap: 64px;
 }
 
-.main{
+.main {
   width: calc(100% - (375px + 64px));
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.main nav{
+.main nav {
   width: 100%;
   height: 54px;
-  background: #18181F;
+  background: #18181f;
   border: 1px solid #202028;
   border-radius: 8px;
 }
 
-.main nav ul{
+.main nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -62,7 +61,7 @@
   padding-left: 16px;
 }
 
-.main nav ul li{
+.main nav ul li {
   width: 100px;
   height: 38px;
   display: flex;
@@ -72,22 +71,22 @@
   font-weight: bold;
   font-size: 13px;
   cursor: pointer;
-  color: #90909F;
+  color: #90909f;
 }
 
-.main ul li:hover{
+.main ul li:hover {
   background: #303035;
 }
 
-.main ul li.active{
-  background: #1F64BF;
+.main ul li.active {
+  background: #1f64bf;
   color: #fff;
 }
 
-.aside{
+.aside {
   width: 100%;
   max-width: 375px;
-  background: #18181F;
+  background: #18181f;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -99,34 +98,67 @@
   border: 1px solid #202028;
 }
 
-.aside img{
+.aside img {
   width: 100%;
   max-width: calc(100% - 50px);
   height: auto;
   min-height: 230px;
   position: relative;
-
 }
 
-.aside button{
+.aside img::before {
+  content: "Lamento, o link para imagem está quebrada :(";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  height: calc(100% + 10px);
+  width: 100%;
+  background: #959599;
+  border: 2px dotted #202028;
+  border-radius: 5px;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside img::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-unlink' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5' /%3E%3Cpath d='M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5' /%3E%3Cline x1='16' y1='21' x2='16' y2='19' /%3E%3Cline x1='19' y1='16' x2='21' y2='16' /%3E%3Cline x1='3' y1='8' x2='5' y2='8' /%3E%3Cline x1='8' y1='3' x2='8' y2='5' /%3E%3C/svg%3E");
+  display: block;
+  font-size: 16px;
+  font-style: normal;
+  font-family: FontAwesome;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.aside button {
   width: 250px;
   height: 46px;
   border: unset;
-  background-color: #1F64BF;
+  background-color: #1f64bf;
   border-radius: 24px;
   color: var(--color-white);
   font-size: 18px;
   font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   cursor: pointer;
 }
 
-.aside button:hover{
-  background: #16498C;
+.aside button:hover {
+  background: #16498c;
 }
 
-
-.formUpload{
+.formUpload {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -135,12 +167,12 @@
   margin-top: 16px;
 }
 
-.formUpload div{
+.formUpload div {
   width: 150px;
   height: 150px;
   border-radius: 8px;
   display: block;
-  background: #25252F;
+  background: #25252f;
   border: 1px solid #343449;
   display: flex;
   flex-direction: row;
@@ -148,27 +180,26 @@
   justify-content: center;
 }
 
-.formUpload div::before{
+.formUpload div::before {
   content: "Sem Logo";
   font-size: 18px;
   font-weight: bold;
-  color: #B4B4C0;
+  color: #b4b4c0;
 }
 
-
-.formUpload button{
+.formUpload button {
   width: 250px;
   height: 46px;
   border: unset;
-  background-color: #1F64BF;
+  background-color: #1f64bf;
   border-radius: 24px;
   color: var(--color-white);
   font-size: 18px;
   font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   cursor: pointer;
 }
 
-.formUpload button:hover{
-  background: #16498C;
+.formUpload button:hover {
+  background: #16498c;
 }
