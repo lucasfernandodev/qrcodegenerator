@@ -1,0 +1,30 @@
+
+.formContent{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px
+}
+
+.formContent label{
+  font-size: 16px;
+  font-weight: bold;
+  color: #CDCDCF;
+}
+
+.formContent textarea{
+  background: #18181F;
+  border: 1px solid #343449;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  padding: 15px;
+  color: #fff;
+  resize: none;
+}
+
+.formContent textarea::-webkit-resizer{
+  display: none;
+}

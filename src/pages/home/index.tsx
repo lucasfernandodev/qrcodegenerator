@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Accordion from '../../components/Accordion';
+import FormContent from '../../components/FormContent';
 import style from './style.module.css';
 
 export default function App() {
@@ -39,7 +40,7 @@ export default function App() {
             <li>E-mail</li>
           </ul>
         </nav>
-        <Accordion title='Conteúdo'>teste</Accordion>
+        <FormContent />
         <Accordion title='Fazer upload de logo'></Accordion>
         <Accordion title='Editar design'></Accordion>
         <Accordion title='Editar Cores'></Accordion>
