@@ -1,0 +1,46 @@
+.formDesign{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.formDesign fieldset{
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.formDesign > fieldset > div{
+  display: flex;
+  gap: 8px;
+  min-height: 30px;
+  align-items: center;
+}
+
+.formDesign > fieldset label{
+  font-size: 16px;
+  font-weight: bold;
+  color: #b4b4c0;
+  cursor: pointer;
+}
+
+.formDesign .groupImages{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+
+.formDesign .groupImages img{
+  width: 70px;
+  height: 60px;
+  object-fit: cover;
+  background: #19191d;
+  border: 4px solid #19191d;
+  border-radius: 4px;
+}

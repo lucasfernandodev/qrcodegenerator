@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Accordion from '../../components/Accordion';
 import FormContent from '../../components/FormContent';
+import FormDesign from '../../components/FormDesign';
 import style from './style.module.css';
 
 export default function App() {
@@ -47,7 +48,7 @@ export default function App() {
             <button>Selecionar imagem</button>
           </form>
         </Accordion>
-        <Accordion title='Editar design'></Accordion>
+        <FormDesign />
         <Accordion title='Editar Cores'></Accordion>
       </main>
 
