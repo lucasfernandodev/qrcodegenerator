@@ -1,16 +1,17 @@
 import { useEffect, useRef } from 'react';
+import Accordion from '../../components/Accordion';
 import style from './style.module.css';
 
 export default function App() {
 
-  const navigationRef = useRef<null | Element>(null);
+  const navigationRef = useRef<null | HTMLElement>(null);
 
   useEffect(() => {
 
     const menuItens = navigationRef.current && navigationRef.current.querySelectorAll(`li`);
 
     function toggleTabNavigation(e: Event){
-      console.log("teste")
+
       const element: Element = e.target as Element;
 
       menuItens && menuItens.forEach(element => element.classList.remove(style.active));
@@ -38,6 +39,10 @@ export default function App() {
             <li>E-mail</li>
           </ul>
         </nav>
+        <Accordion title='Conteúdo'>teste</Accordion>
+        <Accordion title='Fazer upload de logo'></Accordion>
+        <Accordion title='Editar design'></Accordion>
+        <Accordion title='Editar Cores'></Accordion>
         </main>
     </div>
     </>

@@ -1,5 +1,5 @@
 .header{
-  background: #1F64BF;
+  background: var(--color-primary);
   height: 60px;
   width: 100%;
   padding: 0 32px;
@@ -37,6 +37,9 @@
 
 .main{
   width: calc(100% - (375px + 64px));
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .main nav{
@@ -68,7 +71,7 @@
   font-weight: bold;
   font-size: 13px;
   cursor: pointer;
-  color: #90909F;
+  color: var(--color-primary);
 }
 
 .main ul li:hover{

@@ -5,7 +5,9 @@
 }
 
 :root{
+  --color-primary: #1F64BF;
   --color-white: #f5f5ff;
+  --color-bg-component: #202028;
 }
 
 body{

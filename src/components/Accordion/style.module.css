@@ -1,0 +1,47 @@
+.Accordion{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: var(--color-bg-component);
+  border: 1px solid transparent;
+  list-style: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.Accordion:hover{
+  border: 1px solid var(--color-primary);
+}
+
+.Accordion[open]{
+  border: 1px solid #18181F;
+}
+
+.Accordion[open] summary{
+  background: #18181F;
+}
+
+.Accordion summary{
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  padding-left: 16px;
+  color: #CDCDCF;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+
+.Accordion summary button{
+  background: none;;
+  border: none;
+  position: absolute;
+  right: 16px;
+}
+.Accordion > div{
+  padding: 8px 16px 32px 25px;
+}
