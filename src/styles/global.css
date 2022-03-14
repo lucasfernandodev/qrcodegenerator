@@ -1,0 +1,16 @@
+*{
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root{
+  --color-white: #f5f5ff;
+}
+
+body{
+  background: #101015;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
