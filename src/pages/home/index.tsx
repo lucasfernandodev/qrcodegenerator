@@ -41,13 +41,18 @@ export default function App() {
           </ul>
         </nav>
         <FormContent />
-        <Accordion title='Fazer upload de logo'></Accordion>
+        <Accordion title='Fazer upload de logo'>
+          <form className={style.formUpload}>
+            <div className="Image"></div>
+            <button>Selecionar imagem</button>
+          </form>
+        </Accordion>
         <Accordion title='Editar design'></Accordion>
         <Accordion title='Editar Cores'></Accordion>
       </main>
 
     <aside className={style.aside}>
-      <img src="/public/images/qrcode.svg" alt="QRCODE"/>
+      <img src="/public/images/qrcode.svg" alt="QRCODE" />
       <button>Gerar QR code</button>
     </aside>
     </div>
