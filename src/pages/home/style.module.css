@@ -95,6 +95,7 @@
   border-radius: 8px;
   gap: 24px;
   padding: 24px 16px;
+  height: 100%;
 }
 
 .aside img{
@@ -112,4 +113,9 @@
   font-size: 18px;
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+}
+
+.aside button:hover{
+  background: #16498C;
 }
