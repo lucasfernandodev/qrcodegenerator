@@ -77,12 +77,8 @@ const FormDesign = () => {
           </div>
         </fieldset>
         <fieldset className={style.groupImages}>
-        {/* {imageNamesArray.map(name => 
-          <img src={`/public/images/body/${name}.png`} alt={name} />
-        )} */}
-
        {selectImageGroup[images] && selectImageGroup[images].map(path => 
-          <img src={path} alt={path} />
+          <img src={path} alt={path} key={path}/>
         )}
         </fieldset>
       </form>
