@@ -17,6 +17,10 @@ body{
   font-size: 16px;
 }
 
+fieldset{
+  border: unset;
+}
+
 
 ::-webkit-scrollbar {
   width: 16px;
