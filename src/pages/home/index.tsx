@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Accordion from '../../components/Accordion';
+import FormColors from '../../components/FormColors';
 import FormContent from '../../components/FormContent';
 import FormDesign from '../../components/FormDesign';
 import style from './style.module.css';
@@ -49,7 +50,7 @@ export default function App() {
           </form>
         </Accordion>
         <FormDesign />
-        <Accordion title='Editar Cores'></Accordion>
+        <FormColors />
       </main>
 
     <aside className={style.aside}>

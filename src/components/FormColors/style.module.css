@@ -1,0 +1,86 @@
+.formColors{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.formColors > nav.select{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  background: none;
+}
+
+.formColors nav fieldset{
+  display: flex;
+  gap: 8px;
+  min-height: 30px;
+  align-items: center;
+}
+
+.formColors nav fieldset label{
+  font-size: 16px;
+  font-weight: bold;
+  color: #b4b4c0;
+  cursor: pointer;
+}
+
+.formColors .content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.formColors .content div{
+  width: calc(100% / 3);
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.formColors .content fieldset{
+  width: 90px;
+  height: 40px;
+  background: #25252f;
+  border: 1px solid #343449;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 8px;
+}
+
+.formColors .content fieldset input{
+  border: unset;
+  background: transparent;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: unset;
+  overflow: hidden;
+}
+
+.formColors .content fieldset input::-webkit-color-swatch{
+  border: 0
+}
+
+.formColors .content fieldset label{
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.formColors .content .colorGroup span{
+  color: #999;
+  font-size: 15px;
+  padding-left: 4px;
+  font-weight: 500;
+}
