@@ -3,6 +3,7 @@ import Accordion from '../../components/Accordion';
 import FormColors from '../../components/FormColors';
 import FormContent from '../../components/FormContent';
 import FormDesign from '../../components/FormDesign';
+import FormUpload from '../../components/FormUpload';
 import Header from '../../components/Header';
 import style from './style.module.css';
 
@@ -31,7 +32,7 @@ export default function App() {
   return (
     <>
     <Header />
-    
+
     <div className={style.content}>
       <main className={style.main}>
         <nav className={style.navigation} ref={navigationRef}>
@@ -42,12 +43,7 @@ export default function App() {
           </ul>
         </nav>
         <FormContent />
-        <Accordion title='Fazer upload de logo'>
-          <form className={style.formUpload}>
-            <div className="Image"></div>
-            <button>Selecionar imagem</button>
-          </form>
-        </Accordion>
+        <FormUpload />
         <FormDesign />
         <FormColors />
       </main>
