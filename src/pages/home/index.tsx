@@ -3,6 +3,7 @@ import Accordion from '../../components/Accordion';
 import FormColors from '../../components/FormColors';
 import FormContent from '../../components/FormContent';
 import FormDesign from '../../components/FormDesign';
+import Header from '../../components/Header';
 import style from './style.module.css';
 
 export default function App() {
@@ -29,10 +30,8 @@ export default function App() {
   }, [])
   return (
     <>
-    <header className={style.header}>
-      <h1>.Gerar QRCODE</h1>
-      <a href="/">Ver no github</a>
-    </header>
+    <Header />
+    
     <div className={style.content}>
       <main className={style.main}>
         <nav className={style.navigation} ref={navigationRef}>
