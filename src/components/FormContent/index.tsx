@@ -5,18 +5,17 @@ import Email from './Email';
 import Text from './Text';
 import Url from './Url';
 
-type FormContentType = "text"| 'url' | 'email'
 
 type PropsFormContent = {
-  type: FormContentType
+  type: "text"| 'url' | 'email'
 }
 
-interface formContent {
-  [key : string]: ReactElement
-}
 const FormContent: React.FunctionComponent<PropsFormContent> = ({type}) => {
 
-  
+  interface formContent {
+    [key : string]: ReactElement
+  }
+
   const typeFormContent:formContent = {
     text: <Text />,
     url: <Url/>,
@@ -26,7 +25,6 @@ const FormContent: React.FunctionComponent<PropsFormContent> = ({type}) => {
   return (
   
     <Accordion title="Conteúdo" hide={false}>
-        {console.log(typeFormContent[type])}
       <form className={style.formContent}>
         {typeof typeFormContent[type] !== 'undefined' && typeFormContent[type]}
       </form>

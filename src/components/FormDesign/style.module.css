@@ -41,10 +41,15 @@
   height: auto;
   object-fit: cover;
   background: #19191d;
-  border: 2px solid #19191d;
+  border: 1px solid #19191d;
   border-radius: 4px;
   opacity: 0.5;
   padding: 4px;
+}
+
+.formDesign .groupImages img.active{
+  border: 1px solid #50507a; 
+  opacity: 1;
 }
 
 .formDesign .groupImages img:hover{

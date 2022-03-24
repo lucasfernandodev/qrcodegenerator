@@ -34,8 +34,6 @@ export default function App() {
         element.addEventListener("click", (e) => toggleTabNavigation(e));
       });
 
-      // const optionDataType = document.querySelectorAll('[data-type]');
-      // optionDataType.forEach(option => option.onclick = setTypeContent(option.dataset.type))
   }, []);
 
 
