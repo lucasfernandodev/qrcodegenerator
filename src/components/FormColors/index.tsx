@@ -163,25 +163,34 @@ const FormColors = () => {
         </nav>
         <div ref={colorRef}>
           <div className={style.content}>
-            {contentColors[tabCurrent]
-            .map((item: any, index) => {
-              typeof item.type !== "undefined" && (
-                <div className={style.colorGroup} key={index}>
-                  <ColorGroup color={colorCurrent} data={item} key={index} onChange={setColors}
-                  />
-                </div>
-              );
+            {contentColors[tabCurrent].map((item: any, index) => {
+              if (typeof item.type !== "undefined") {
+                return (
+                  <div className={style.colorGroup} key={index}>
+                    <ColorGroup
+                      color={colorCurrent}
+                      data={item}
+                      key={index}
+                      onChange={setColors}
+                    />
+                  </div>
+                );
+              }
 
-              typeof item.type === "undefined" && (
-                <div className={style.colorGroup} key={index}>
-                  {item.map((input: any) => <ColorGroup 
-                    color={colorCurrent} 
-                    data={input} 
-                    key={input.id} 
-                    onChange={setColors}
-                  />)}
-                </div>
-              );
+              if (typeof item.type === "undefined") {
+                return (
+                  <div className={style.colorGroup} key={index}>
+                    {item.map((input: any) => (
+                      <ColorGroup
+                        color={colorCurrent}
+                        data={input}
+                        key={input.id}
+                        onChange={setColors}
+                      />
+                    ))}
+                  </div>
+                );
+              }
             })}
           </div>
         </div>
