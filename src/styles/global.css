@@ -45,3 +45,7 @@ fieldset{
 ::-webkit-scrollbar-thumb:hover {
   background: #90909f;
 }
+
+input:focus, textarea:focus{
+  border-color: #50507a
+}
