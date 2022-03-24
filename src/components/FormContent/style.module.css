@@ -11,13 +11,31 @@
   font-size: 16px;
   font-weight: bold;
   color: #CDCDCF;
+  margin-bottom: 4px;
+}
+
+.formContent input{
+  background: #18181F;
+  border: 1px solid #343449;
+  border-radius: 4px;
+  height: 38px;
+
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+  padding-left: 15px;
+  color: #fff;
+}
+
+.formContent input::placeholder, .formContent textarea::placeholder{
+  font-size: 13px;
 }
 
 .formContent textarea{
   background: #18181F;
   border: 1px solid #343449;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   outline: none;
   padding: 15px;
@@ -27,4 +45,8 @@
 
 .formContent textarea::-webkit-resizer{
   display: none;
+}
+
+.formContent input ~ label{
+  margin-top: 8px;
 }

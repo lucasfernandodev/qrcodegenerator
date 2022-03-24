@@ -1,18 +1,34 @@
+import React, { ReactElement } from "react";
 import Accordion from "../Accordion";
 import style from "./style.module.css";
+import Email from './Email';
+import Text from './Text';
+import Url from './Url';
 
-const FormContent = () => {
+type FormContentType = "text"| 'url' | 'email'
+
+type PropsFormContent = {
+  type: FormContentType
+}
+
+interface formContent {
+  [key : string]: ReactElement
+}
+const FormContent: React.FunctionComponent<PropsFormContent> = ({type}) => {
+
+  
+  const typeFormContent:formContent = {
+    text: <Text />,
+    url: <Url/>,
+    email: <Email />,
+  }
+
   return (
-    <Accordion title="Conteúdo">
+  
+    <Accordion title="Conteúdo" hide={false}>
+        {console.log(typeFormContent[type])}
       <form className={style.formContent}>
-        <label htmlFor="contentText">Digite seu Texto</label>
-        <textarea
-          name="contentText"
-          id="contentText"
-          cols={30}
-          rows={10}
-          placeholder="Seu texto..."
-        ></textarea>
+        {typeof typeFormContent[type] !== 'undefined' && typeFormContent[type]}
       </form>
     </Accordion>
   );
