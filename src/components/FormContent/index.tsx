@@ -1,4 +1,3 @@
-import React, { ReactElement } from "react";
 import Accordion from "../Accordion";
 import style from "./style.module.css";
 import Email from './Email';
@@ -13,7 +12,7 @@ type PropsFormContent = {
 const FormContent: React.FunctionComponent<PropsFormContent> = ({type}) => {
 
   interface formContent {
-    [key : string]: ReactElement
+    [key : string]: React.ReactNode
   }
 
   const typeFormContent:formContent = {
@@ -24,7 +23,7 @@ const FormContent: React.FunctionComponent<PropsFormContent> = ({type}) => {
 
   return (
   
-    <Accordion title="Conteúdo" hide={false}>
+    <Accordion title="Conteúdo" open={true} hideIcon={true}>
       <form className={style.formContent}>
         {typeof typeFormContent[type] !== 'undefined' && typeFormContent[type]}
       </form>

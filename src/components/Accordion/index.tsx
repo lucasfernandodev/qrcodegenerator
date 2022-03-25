@@ -1,39 +1,46 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import IconPen from "../../utils/IconPen";
 import style from "./style.module.css";
 
 
 type Props = {
   title: string;
-  hide?: boolean;
+  hideIcon?: boolean
+  open?: boolean;
 };
 
 const Accordion: React.FunctionComponent<Props> = ({
   title,
   children,
-  hide = true,
+  open = false,
+  hideIcon = false,
 }) => {
-  const imageRef = useRef<HTMLImageElement | null>(null);
 
-  function toggleIcon() {
-    if (imageRef.current) {
-      if (imageRef.current.getAttribute("src") === "/public/icon/more.svg") {
-        imageRef.current.setAttribute("src", "/public/icon/minus.svg");
-      } else {
-        imageRef.current.setAttribute("src", "/public/icon/more.svg");
-      }
-    }
+  const dRef = useRef<HTMLDetailsElement | null>(null)
+  const [openShow, setOpenShow] = useState<boolean>(false)
+
+  useEffect(() => {
+    openShow !== open && setOpenShow(open)
+  }, [])
+
+
+  function ontChange(e: any){
+
+    console.log('casa ')
+
+    const el = e.target as HTMLDetailsElement;
+        const currentOpen = openShow;
+        const openAttr =el.getAttribute('open');
+      
+        // openAttr && setOpenShow(openAttr)
   }
 
   return (
-    <details className={style.Accordion} open={hide === false ? true : false}>
-      <summary onClick={toggleIcon}>
+    <details onChange={e => ontChange(e)} className={style.Accordion} open={open}>
+      <summary onClick={() => setOpenShow(!openShow)}>
         {title}
-        <button onClick={toggleIcon}>
-          <img
-            src="/public/icon/more.svg"
-            alt="Ver conteúdo"
-            ref={imageRef}
-          ></img>
+        <button>
+          {hideIcon === false && <IconPen  stroke="#343449" hide={!openShow}/>}
         </button>
       </summary>
       <div>{children && children}</div>
