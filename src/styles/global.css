@@ -17,6 +17,13 @@ body{
   font-size: 16px;
 }
 
+@media (min-width: 960px){
+  html{
+    width:100vw;
+    overflow-x:hidden;
+  }
+}
+
 fieldset{
   border: unset;
 }
